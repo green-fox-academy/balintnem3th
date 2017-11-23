@@ -1,0 +1,32 @@
+/**{
+	margin:0;
+	padding:0;
+}*/
+
+h1{
+	color : rgb(237,104,81);
+	 font-weight: 900;
+
+}
+
+h2{
+	color:rgb(132 ,66 , 198);
+    font-weight: 900;
+
+}
+
+p{
+	font-size:15px;
+	 font-weight: 0;
+}
+ol > li{
+	color:rgb(255 , 165 , 250);
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+ol :last-child{
+	color:rgb(0,0,0);
+}
+ 
+
