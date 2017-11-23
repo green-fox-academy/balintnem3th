@@ -1,0 +1,56 @@
+/*379 289*/
+*{
+	margin:0;
+	padding:0;
+}
+
+#first
+{
+  
+  background-color: rgb(70,136,249);
+  margin-left:20px;
+  width: 383px;
+  height: 293px;
+  position: relative;
+ 
+}
+
+#first #second
+{
+  
+  background:rgb(230,118,117) ;
+  margin-top:16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  width: 349px;
+  height: 258px;
+  position: absolute;
+}
+
+
+#north{
+	padding-top: 51px;
+	text-align: center;
+	font-size: 36px;
+	color:rgb(255 , 232 , 218);
+}
+
+#first #third
+{
+  background:rgb(170,230,230) ;
+  margin-top:16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  width: 349px;
+  height: 258px;
+  position: absolute;
+}
+
+#south{
+	padding-top: 51px;
+	text-align: center;
+	font-size: 36px;
+	color:rgb(255 , 232 , 218);
+}
