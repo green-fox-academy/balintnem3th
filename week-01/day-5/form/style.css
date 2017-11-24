@@ -1,0 +1,54 @@
+*{
+	padding: 0;
+	margin :0;
+	box-sizing:border-box;
+}
+
+body{
+	background: green;
+	padding-left: 270px;
+	padding-right: 270px;
+}
+
+.yellow{
+	background-color: yellow;
+
+}
+header{
+	padding: 14px;
+	background-color: red;
+	margin-top: 12px;
+
+}
+.nav{
+	height: 16px;
+}
+
+.box{
+	width: 50%;
+	height: 100%;
+	float:left;
+	padding:14px;
+}
+
+.content{
+	height: 356px;
+	margin-top:14px;
+}
+
+.red{
+	background-color: red;
+}
+
+.inner{
+	height: 100%;
+}
+
+
+footer{
+	padding: 14px;
+	background-color: red;
+	margin-top: 15px;
+	height: 137px;
+
+}

@@ -1,0 +1,24 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#circle{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background:rgb(183 , 13 , 234);
+      display:inline-block;
+      text-align: center;
+
+    }
+#circle2{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background:rgb(183 , 13 , 234);
+      display:inline-block;
+      text-align: center;
+
+    }
+
