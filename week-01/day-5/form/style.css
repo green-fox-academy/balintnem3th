@@ -4,24 +4,46 @@
 	box-sizing:border-box;
 }
 
-body{
-	background: green;
-	padding-left: 270px;
-	padding-right: 270px;
+/*.green{
+	width: 454px;
+	color: black;
+}
+*/
+.border-box {
+  
+  width: 430px;
+  height: 700px;
+  background: green;
+  margin:auto;
+  padding-top:8px;
+/*  margin-top: 30px;*/
+
 }
 
+
+
+/*body{
+	background: green;
+	padding-left: 80px;
+	padding-right: 60px;
+	width: 680px;
+}
+*/
 .yellow{
 	background-color: yellow;
 
+
 }
 header{
+	width: 100%;
 	padding: 14px;
 	background-color: red;
-	margin-top: 12px;
+/*	margin-top: 30px;*/
 
 }
 .nav{
 	height: 16px;
+
 }
 
 .box{
@@ -32,7 +54,7 @@ header{
 }
 
 .content{
-	height: 356px;
+	height: 380px;
 	margin-top:14px;
 }
 
@@ -41,14 +63,76 @@ header{
 }
 
 .inner{
+	    height: 100%;
+	    padding-top: 50;
+}
+.outer{
 	height: 100%;
 }
-
 
 footer{
 	padding: 14px;
 	background-color: red;
 	margin-top: 15px;
-	height: 137px;
+	height: 117px;
 
 }
+
+.black{
+
+	width: 100%;
+	height: 110px;
+	border:2px solid;
+	margin-top: 200px;
+	
+}
+
+.kisblack{
+	margin-bottom: 30px; 
+    width: 50%;
+    float: left;
+    height: 34px;
+    border: 2px solid;
+	margin-top: 80px;
+	
+}
+
+form{
+	background-color: rgb(160,160,160);;
+}
+
+p{
+	font-size: 18px;
+	color: rgb(96,96,96);
+	background-color:rgb(160,160,160);
+}
+
+.szemAd{
+
+    margin-bottom: 50px;
+    height: 34px;
+    margin-top: -50px;
+    text-align: center;
+    color:rgb(255,255,255);
+    background-color:rgb(160,160,160);
+}
+
+
+.kapcsolat{
+
+    margin-bottom: 50px;
+    height: 34px;
+    
+    margin-top: -50px;
+    text-align: center;
+    color:rgb(255,255,255);
+    background-color:rgb(160,160,160);
+}
+
+input[type="radio"]
+{
+	float:right;
+	width:30px;
+
+}
+
