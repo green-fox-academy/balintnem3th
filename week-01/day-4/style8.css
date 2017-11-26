@@ -1,0 +1,29 @@
+div:first-child {
+    border: 2px solid rgb(15, 132, 243);
+    width: 796px;
+    padding: 13px;
+    margin: 10px;
+}
+span {
+    display: inline-block;
+    background: rgb(15, 132, 243);
+    border: 3px solid rgb(15, 132, 243);
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+div:last-child {
+    border: 2px solid rgb(15, 132, 243);
+    width: 796px;
+    padding: 13px;
+    margin: 10px;
+    background: rgb(255, 85, 54);
+}
+div:last-child > span {
+    display: inline-block;
+    background: rgb(107, 53, 111);
+    border: 3px solid rgb(107, 53, 111);
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}

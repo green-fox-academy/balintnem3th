@@ -1,0 +1,20 @@
+*{
+	padding: 0;
+	margin :0;
+}
+
+p, div:nth-child(3) {
+    color: blue;
+}
+div > div {
+    border: 1px solid green;
+    width: 150px;
+}
+div {
+    font-weight: bold;
+}
+p {
+    background: yellow;
+    border: none;
+    width: 150px;
+}
