@@ -4,6 +4,5 @@ for x in range(100):
     elif(((x+1) % 3) == 0):
         print("Fizz")
     elif((((x+1) % 5)) == 0):
-        print("Buzz")
-    
+        print("Buzz")   
     else:print(str(x+1))
