@@ -1,3 +1,5 @@
+import math
+
 a = 3
 # make it bigger by 10
 a += 10
@@ -69,18 +71,18 @@ print( h % 11 == 0)
 i1 = 10
 i2 = 3
 # tell if i1 is higher than i2 squared and smaller than i2 cubed (pras a boolean)
-
+print((math.sqrt(i2)) < i1 < (i2 ** 2))
 
 
 
 j = 1521
 # tell if j is dividable by 3 or 5 (pras a boolean)
-
+print(  (1521 % 3 == 0) or  (1521 % 5 == 0))
 
 
 
 k = "Apple"
 #fill the k variable with its cotnent 4 times
-
+k *= 4
 
 print(k)
