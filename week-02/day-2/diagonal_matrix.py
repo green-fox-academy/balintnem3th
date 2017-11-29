@@ -10,8 +10,5 @@ def diagonal_matrix(number):
         
         helper.append(matrix)
     print(helper)
-    
-
-
 
 diagonal_matrix(5)
