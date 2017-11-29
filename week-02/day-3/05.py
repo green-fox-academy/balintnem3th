@@ -1,7 +1,7 @@
 todoText = " - Buy milk\n"
 
 def text_adder(todo_list):
-    new_text= "My todo:\n" + todoText + " - Download games \n     - Diablo" 
+    new_text= "My todo:\n" + todoText + " - Download games \n     - Diablo" y
     print(new_text)
 
 
