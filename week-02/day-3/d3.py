@@ -22,7 +22,7 @@ def get_info(akkont):
             infok.append(x['balance'])
     return infok
     
-print(get_info(11234543))
+#print(get_info(11234543))
 
 def transfer(from_akk,to_akk,amount):
     akk1_amount = 0
