@@ -3,11 +3,8 @@ range1 = int(input("Range1:"))
 range2 = int(input("Range2:"))
 magic_number = randint(range1,range2)
 
-
 def guess_game(life,guess_number):
-
     
-
     print(magic_number)
     lives = int(life)
     guess = guess_number
@@ -24,14 +21,11 @@ def guess_game(life,guess_number):
             break
         if lives == 0:
             print("You have 0 lives .Game Over!")
-            break
-
-            
+            break            
 def restart():
     print("You can start over the game ")
     lives= input("How many lives you want to play with? ")
     return lives
-
         
 guess_game(5,magic_number)
 bonus_life = restart()
