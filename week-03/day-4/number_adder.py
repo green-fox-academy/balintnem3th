@@ -1,4 +1,3 @@
-# Write a recursive function that takes one parameter: n and adds numbers from 1 to n.
 
 def numb_adder(n):
     if n <=1 :
