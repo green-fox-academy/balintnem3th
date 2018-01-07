@@ -1,0 +1,13 @@
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:10px;
+    background-color: purple;
+    grid-gap:20px;
+}
+
+.two{
+    grid-column: 2/3;
+    height:40px;
+}
+

@@ -1,0 +1,39 @@
+body{
+    background: rgb(12, 150, 150);
+    align-items: center;
+}
+
+tr:nth-child(2n){
+    background: grey;
+}
+
+tr:nth-child(2n+1){
+    background: rgb(129, 44, 44);
+}
+tr:nth-child(n){
+    
+    color: rgb(6, 19, 129);
+}
+
+tr:nth-child(1){
+    background: black;
+    color: aqua;
+}
+
+table, tr, td {
+    border: 3px solid rgb(105, 1, 1);
+    width:50%;
+    
+    
+ }
+table {
+
+    float: left;
+    position: relative;
+    left: -30%;
+    width: 40%;
+    /* top: 30%; */
+    margin-top: 15%;
+}
+
+

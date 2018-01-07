@@ -1,0 +1,44 @@
+.container {
+ 
+}
+.flex-container{
+  display: flex;
+  width: 100%;
+  height: 500px;
+  flex-direction:row;
+
+
+ 
+  
+} 
+
+.item {
+    flex-basis: 500px;
+}
+
+.green{
+  background: green; 
+
+}
+
+.yellow{
+  background: orange; 
+
+
+}
+
+.purple{
+  background: purple;
+ 
+}
+/* .flex-container :nth-child(3){order:1;} */
+/* .flex-container :nth-child(2){order:3;} */
+
+@media screen and (max-width: 700px){
+    .flex-container{
+        flex-direction:column;
+        flex-basis: 300px;
+        width:100%;
+    }
+   
+}

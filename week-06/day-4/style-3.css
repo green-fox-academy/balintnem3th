@@ -1,0 +1,35 @@
+body{
+    display:flex;
+    background: rgba(30, 30, 212, 0.452);
+}
+
+button{
+    width: 120px;
+    height: 80px;
+    border-radius: 10%;
+    margin:12%;
+}
+
+.blue{
+    background: rgb(8, 8, 102);
+    color: azure;
+}
+
+.green{
+    background: rgb(5, 138, 60);
+    color: azure;
+}
+
+.red{
+    background: rgb(148, 18, 18);
+    color: azure;
+}
+
+button:hover{
+    opacity:0.9;
+  
+}
+button:active{
+    filter: brightness(80%);
+   
+}

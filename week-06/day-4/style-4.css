@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgb(51, 48, 48);
+}
+
+div.holder {
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+div.square {
+  color: black;
+  background: white;
+  width: 80px;
+  height: 80px;
+  transform: rotateZ(-45deg);
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.rectangle {
+  z-index: 2;
+  border: 3px solid orange;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  border-radius: 3px;
+  transform: rotateZ(0);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+.rectangle:hover{
+  transform: rotateZ(-45deg);
+  
+}
+.square:hover{
+    color:orange;
+}
+

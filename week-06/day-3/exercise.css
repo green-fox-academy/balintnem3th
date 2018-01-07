@@ -1,0 +1,36 @@
+.container {
+ 
+  }
+.flex-container{
+    display: flex;
+    max-width: 500px;
+    height: 1200px;
+    flex-direction:column;
+    background: grey;
+  
+   
+    
+} 
+
+.item {
+
+  }
+  
+.green{
+    background: green; 
+    flex-grow: 1 ;
+}
+
+.yellow{
+    background: orange; 
+    flex-grow: 2 ;
+    order:1;
+}
+
+.purple{
+    background: purple;
+    flex-grow: 1 ;
+}
+/* .flex-container :nth-child(3){order:1;} */
+/* .flex-container :nth-child(2){order:3;} */
+
