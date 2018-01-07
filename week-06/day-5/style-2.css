@@ -1,13 +1,36 @@
-.container{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    padding:10px;
-    background-color: purple;
-    grid-gap:20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.two{
-    grid-column: 2/3;
-    height:40px;
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(130px, auto);
+    background: black;
+    grid-gap: 10px;
 }
 
+p {
+    background: purple;
+}
+
+.green {
+
+    background: limegreen;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.yellow {
+    background: yellow;
+    width: 75%;
+    height: 75%;
+    margin:auto;
+}
