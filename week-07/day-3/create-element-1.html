@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+<body>
+  <ul class="asteroids">
+    <li id="b325" class="asteroid">The King</li>
+    <li class="asteroid b326">The Conceited Man</li>
+  </ul>
+  <div class="container"></div>
+
+  
+  <script>
+   /* Add an item that says 'The Green Fox' to the asteroid list.
+    Add an item that says 'The Lamplighter' to the asteroid list.
+    Add a heading saying 'I can add elements to the DOM!' to the .container.
+    Add an image, any image, to the container.*/
+ ;
+    var newAsteroid = document.createElement('li');
+    newAsteroid.className = ".asteroid";
+    newAsteroid.textContent = 'The Green Fox';
+    var body = document.querySelector('body');
+    body.appendChild(newAsteroid);
+    var lamplighter = document.createElement('li');
+    body.appendChild(lamplighter);
+    lamplighter.textContent='lamplighter';
+    var asteroidList = document.querySelectorAll('.asteroid')
+    
+    
+    var newHeading = document.createElement('h1');
+    body.appendChild(newHeading);
+    newHeading.textContent = 'I can add elements to the DOM!';
+    document.querySelector('.container').appendChild(newHeading);
+    var newImg =  document.createElement('img');
+    newImg.setAttribute('src','http://extras.mnginteractive.com/live/media/site105/2017/0606/20170606_104801_Pig%201_500.jpg' )
+    body.appendChild(newImg);
+
+
+
+
+  </script>
+ 
+</body>
+</html>

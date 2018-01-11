@@ -1,0 +1,10 @@
+body{
+    background: linear-gradient(to right, rgba(209,209,209,1) 0%, rgba(232,232,232,1) 52%, rgba(219,219,219,1) 100%); 
+}
+.shuffle-box{
+
+    width: 300px;
+    height: 300px;
+    border: 20px  solid red;
+}
+

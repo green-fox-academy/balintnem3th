@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+<body>
+  <h1>The candyshop has:</h1>
+  <ul class="candyshop">
+    <li>1 Mega juicy candy</li>
+  </ul>
+
+  
+  <script>
+  /*  Remove the Mega juicy candy from the list.
+    Add 16 list items saying 'Empty box' to the list and add an index to it, like:
+    Empty box #1
+    Empty box #2
+    Empty box #3
+    ...*/
+    var h1 = document.querySelector('h1');
+    var body = document.querySelector('body');
+    body.removeChild(h1);
+    for(var i=1;i<17;i++){
+        var li = document.createElement('li');
+        body.appendChild(li);
+        li.textContent = 'Empty box #' + parseInt(i);
+    }
+
+  </script>
+  
+</body>
+</html>
