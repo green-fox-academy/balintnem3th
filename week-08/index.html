@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button event</title>
+</head>
+<body>
+    <h1>Hi, my name is </h1>
+
+    <button>Who are you?</button>
+
+    <script>
+        const Eminem = {
+            name: 'Slim shady',
+            speak: function () {
+                var h1 = document.querySelector('h1');
+                h1.textContent += this.name;               // 1) Update the <h1> node text to this.name
+            }
+        }
+       // Eminem.speak();
+        var button = document.querySelector('button');
+        button.addEventListener('click',Eminem.speak.bind(Eminem));
+        // 2) Add a click event on the button and assign Eminem.speak to it
+        // Don't use a wrapper function
+    </script>
+</body>
+</html>
