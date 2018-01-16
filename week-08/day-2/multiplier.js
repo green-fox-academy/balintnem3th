@@ -3,7 +3,7 @@
 // Create the multiplier function that you can use like this:
 
 function multiplier (y){
-    let x;
+    //let x;
     const helper = function(x){
         return y *x;
     }
