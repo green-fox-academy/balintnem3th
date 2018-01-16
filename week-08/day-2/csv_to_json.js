@@ -26,17 +26,27 @@ Loris tardigratus;725;Orange`;
 
 var newArray = [];
 function logger (row){
-
     var newThing  =row.split(';');
     var name = newThing[0];
     var id = newThing[1] ;
-    var color = newThing[2];
+    var color = newThing[2]; 
     var vmi = {name,id,color};
     newArray.push(vmi);
 }
 var datas = data.split('\n');
 datas.map(logger);
-console.log(newArray);
+var resArr = [];
+newArray.filter(function(item){
+ var i = resArr.findIndex(x => x.name == item.name);
+ if(i === -1){
+       resArr.push({name: item.name, id: item.id, color: item.color});
+ }
+ return null;
+});
+console.log(newArray.length);
+console.log(resArr.length);
+
+
 
 // newArray.map(function(e){
 //     console.log(e);
