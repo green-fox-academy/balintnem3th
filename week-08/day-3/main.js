@@ -11,7 +11,7 @@ httpRequest.onreadystatechange = function(){
         console.log(datas);
         var images = document.querySelectorAll('img');
         
-        for(var i=0;i<datas.length;i++){
+        for(var i=0;i<datas.len gth;i++){
            
             
             images[i].addEventListener("click",function(){
