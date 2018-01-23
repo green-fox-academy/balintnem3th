@@ -1,0 +1,14 @@
+body {
+    height: 2000px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background: rgb(183 ,179 , 178);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.banner {
+    height: 250px;
+    background-color:rgb(183 ,179 , 178);
+}
