@@ -1,0 +1,56 @@
+body {
+    height: 2000px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background: rgb(183 ,179 , 178);
+    margin: 0px;
+    padding: 0px;   
+    border: 0px;
+}
+
+.banner {
+    height: 250px;
+    background-color:rgb(183 ,179 , 178);
+}
+
+#bannergif {
+    height: 100%;
+    width: auto;
+    margin-left: 10px;
+}
+
+.submit {
+       width: 198px;
+       margin-left: 14px;
+       height: 43px;
+       background: rgb( 78 ,162 ,220);
+       font-size: 22px;
+       border: 1px solid rgb(183 ,179 , 178);
+       margin-top: 218px;
+}
+
+.submit-container {
+    top: 300px;
+    position: absolute;
+    width: 357px;
+    height: 130px;
+    padding-right: 6%;
+    margin: 15px;
+    background: white;
+    padding-top: 20px;
+}
+
+.submit-input {
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.submit-p {
+    background: white;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+#input1, #input2{
+    width: 270px;
+}
