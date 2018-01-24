@@ -33,7 +33,7 @@ function upVote (id){
             var post = document.querySelector('.posts');
             removeChildrenFromNode(post);
             getData();
-           // console.log('succes');
+           console.log(datas);
         }
     }
     httpRequest.send();
@@ -52,9 +52,10 @@ function createPost(i){
             </div>  
         <div class ="content">
             <p class="title">${i.title}</p>
-            <p class="url">${i.url}<span class = "time"> time: ${convertedTime} </span></p>  
+            <div class="url">${i.url}<span class = "time"> time: ${convertedTime} </span></div>  
+            <a href="modify.html?id=${i.id}" class ="modify"  >Modify</a>
             <div class ="delete" onclick="deletePost(${i.id})">Delete Post</div>  
-            <a href="modify.html?id=${i.id}" class ="modify"  >Modify</a>          
+                     
          </div>  
     <div>
     `;
@@ -91,13 +92,8 @@ function removeChildrenFromNode(node) {
 
 
 function deletePost (id){
-    //let currentDiv = document.querySelector('#'+id);
     let currentDiv = document.querySelector('[data-id="'+id+'"]')
-    //let currentId =id;
-    //console.log(i);
-    // console.log(currentId.id);
     var httpRequest = new XMLHttpRequest();
-    //httpRequest.open('PUT', apiUrl+'/posts/'+currentId+'/upvote');
     httpRequest.open('DELETE', apiUrl+'/posts/'+id); 
     httpRequest.setRequestHeader('Accept','application/json');
     httpRequest.onreadystatechange = function(){
@@ -106,7 +102,6 @@ function deletePost (id){
             var post = document.querySelector('.posts');
             removeChildrenFromNode(post);
             getData();
-           // console.log('succes');
         }
     }
     httpRequest.send();

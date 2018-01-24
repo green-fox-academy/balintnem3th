@@ -12,6 +12,7 @@ var getData = function(){
     httpRequest.open('POST', apiUrl+'/posts'); 
     httpRequest.setRequestHeader('Accept','application/json');
     httpRequest.setRequestHeader('Content-Type','application/json');
+    httpRequest.setRequestHeader('Username','nem-balint');
     httpRequest.send(JSON.stringify(sendBack));
     httpRequest.onreadystatechange = function(){
         if(httpRequest.readyState === 4 && httpRequest.status === 200 ){
