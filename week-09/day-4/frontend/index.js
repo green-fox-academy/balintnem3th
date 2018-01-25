@@ -56,6 +56,28 @@ app.get('/appenda/:name',function(req,res){
       });   
 });
 
+app.post('/dountil/:what',function(req,res){
+    console.log(req.params.what)
+    if( req.params.what === 'sum'){
+        let sum =0;
+        for(var i=0;i<=req.body.until;i++){
+            sum += i;
+        }
+        res.json({result : sum}) 
+    }
+    else if( req.params.what === 'factor'){
+        let fact =1;
+        for(var i=1;i<=req.body.until;i++){
+            fact *= i;
+        }
+        console.log(fact)
+        res.json({result : fact}) 
+    }
+    res.json({
+         error : "Please provide a number!"
+      })
+});
+
 
 
 
