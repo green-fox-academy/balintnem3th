@@ -78,7 +78,30 @@ app.post('/dountil/:what',function(req,res){
       })
 });
 
-
-
+app.post('/arrays',function(req,res){
+    console.log(req.body.what)
+    if( req.body.what === 'sum'){
+        let sum =0;
+        for(var i=0;i<req.body.numbers.length;i++){
+            sum +=req.body.numbers[i];
+        }
+        res.json({result : sum}) 
+    }
+    else if( req.body.what === 'multiply'){
+        let multi =1;
+        for(var i=0;i<req.body.numbers.length;i++){
+            multi *=req.body.numbers[i];
+        }
+        res.json({result : multi}) 
+    }
+    else if( req.body.what === 'double'){
+        let double =[];
+        for(var i=0;i<req.body.numbers.length;i++){
+            double.push(req.body.numbers[i]*2);
+        }
+        res.json({result : double}) 
+    }
+  
+});
 
 app.listen(8080);
