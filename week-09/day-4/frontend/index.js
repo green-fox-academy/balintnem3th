@@ -27,6 +27,7 @@ app.get('/doubling',function(req,res){
 
 
 app.get('/greeter',function(req,res){
+
     var prof = req.param('title');
     var name = req.param('name');
     //console.log(name);
@@ -46,6 +47,14 @@ app.get('/greeter',function(req,res){
 
 });
 
+app.get('/appenda/:name',function(req,res){
+    if( req.params.name === undefined){
+        res.status(404); 
+    }
+    res.json({
+         appended : req.params.name +"a",
+      });   
+});
 
 
 
