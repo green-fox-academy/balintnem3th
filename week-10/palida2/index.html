@@ -4,26 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+     <link href="./assets/style.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 <body>
     
     <input type='text' class='searchPlate'></input>
     <button class='button' onclick = "getPlate()" >SEARCH PLATE</button>
-    <input id="policeCheck" type="checkbox">Police</input>
-    <input id="diplomatCheck" type="checkbox">Diplomat</input>
-   
-    <table>
-            <tr>
-            <td>Plate:    </td>
-            <td>Brand:    </td>
-            <td>Model:    </td>
-            <td>Color:    </td>
-            <td>Year:     </td>
-            </tr>
-    </table>
+    <input id="policeCheck" type="radio"  name="name">Police</input>
+    <input id="diplomatCheck" type="radio" name="name">Diplomat</input>
+    <button class='refresh' onclick = "reload()" >Refresh</button>
     <div class ='container'></div>
-    <script src='index.js'></script>
+    <script src='./assets/index.js'></script>
 </body>
 </html>
