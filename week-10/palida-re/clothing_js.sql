@@ -2,7 +2,7 @@ CREATE TABLE warehouse(
 id INT NOT NULL AUTO_INCREMENT,
 item_name VARCHAR(80),
 manufacturer VARCHAR(30),
-category VARCHAR(30),
+category VARCHAR(30), 
 size VARCHAR(4),
 unit_price FLOAT,
 in_store INT,
@@ -40,4 +40,4 @@ VALUES
 ('Wool/Alpaca Shawl Collar Cardigan', 'Bonnie Jean', 'sweaters', 'm', 100.00, 10),
 ('Wool/Alpaca Shawl Collar Cardigan', 'Bonnie Jean', 'sweaters', 'l', 100.00, 10),
 ('Two-Tone Sleeveless Sheath Dress', 'Nicole Miller', 'dresses', 'm', 69.90, 10),
-('Wool/Alpaca Shawl Collar Cardigan', 'Bonnie Jean', 'sweaters', 'xxl', 100.00, 10);
+('Wool/Alpaca Shawl Collar Cardigan', 'Bonnie Jean', 'sweaters', 'xxl', 100.00, 10);    
