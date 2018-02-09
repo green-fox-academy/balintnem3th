@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line
 
 /* eslint linebreak-style: ['error', 'windows'] */
 
@@ -64,26 +64,6 @@ app.get('/ship', (req, res) => {
   });
 });
 
-// app.post('/movehere/:planetId', (req, res) => {
-//   let planetId = req.params.planetId; 
-//   console.log(planetId, '$$$$$');
-//   let name = convertIdToName(planetId);
-//   console.log('!!!', name);
-//   const sql = `UPDATE spaceship SET planet=${name} WHERE spaceship.id=1;`;
-//   conn.query(sql, (err, row) => {
-//     if (err) {
-//       res.status(400);
-//       res.json({
-//         error: err,
-//       });
-//     }
-//     res.status(200);
-//     res.json({
-//       rows: row,
-//     });
-//   });
-// });
-
 app.listen(PORT, () => {
   console.log('app listen on :', PORT);
 });
@@ -115,9 +95,8 @@ app.post('/movehere/:planetId', (req, res) => {
   });
 });
 
-
 app.post('/toship/:planetId', (req, res) => {
-  const planetId = req.params.planetId; 
+  const planetId = req.params.planetId;
   const sql = `SELECT population FROM planet WHERE id = ${planetId};`;
   conn.query(sql, (err, population) => {
     if (err) {
@@ -126,14 +105,15 @@ app.post('/toship/:planetId', (req, res) => {
     const populationOnPlanet = population[0].population;
     if (populationOnPlanet >= utilization) {
       const substractedPop = populationOnPlanet - utilization;
-      const sql2 = `UPDATE planet SET population = ${substractedPop} WHERE id = ${planetId};`;
-                    // UPDATE spacehip SET utilization = utilization + 60 WHERE id = 1;`;
+      const sql2 = `UPDATE planet,spaceship SET population =${substractedPop} , utilization = utilization+60 WHERE planet.id = ${planetId} and spaceship.id = 1;`;
       conn.query(sql2, (error, row) => {
         if (error) {
           res.status(400);
           res.json({
             error,
           });
+          console.log(error);
+          return;
         }
         res.status(200);
         res.json({
@@ -142,14 +122,15 @@ app.post('/toship/:planetId', (req, res) => {
       });
     }
     else {
-      const sql2 = `UPDATE planet SET population = 0 WHERE id = ${planetId};`;
-                    // UPDATE spacehip SET utilization = utilization + ${populationOnPlanet} WHERE id = 1;`;
+      const sql2 = `UPDATE planet,spaceship SET population = 0 , utilization = utilization+${populationOnPlanet} WHERE planet.id = ${planetId} and  spaceship.id = 1;`;
       conn.query(sql2, (error, row) => {
         if (error) {
           res.status(400);
           res.json({
             error,
           });
+          console.log(error);
+          return;
         }
         res.status(200);
         res.json({

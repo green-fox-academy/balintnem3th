@@ -1,11 +1,11 @@
-'use strict' ;
+'use strict' ; // eslint-disable-line
 
 /* eslint linebreak-style: ['error', 'windows'] */
 
 function connect(method, query, callback) {
   const xhr = new XMLHttpRequest();
   const url = `http://localhost:8080${query}`;
-  console.log('MyURL', url);
+  // console.log('MyURL', url);
   xhr.open(method, url);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
@@ -18,18 +18,18 @@ function connect(method, query, callback) {
 
 
 function createTableRow(data) {
-  console.log(data);
+  // console.log(data);
   const tbody = document.getElementById('planetRows');
   tbody.innerHTML = '';
   connect('GET', '/ship', (shipInfo) => {
     data.rows.forEach((element) => { 
       const tableRow = document.createElement('tr');
-      //console.log(shipInfo);
+      // console.log(shipInfo);
       // Name
       const nameCell = document.createElement('td');
       // nameCell.appendChild(document.createTextNode(element.name));
       nameCell.innerText = element.name;
-      console.log('name',nameCell.innerText );
+      // console.log('name',nameCell.innerText );
       tableRow.appendChild(nameCell);
       // Population
       const populationCell = document.createElement('td');
@@ -61,7 +61,7 @@ function createTableRow(data) {
         button.setAttribute('data-planet-id', element.id);
         button.addEventListener('click', () => {
           moveShip(element.id);
-          console.log(element.id);
+          // console.log(element.id);
         });
         buttonCell.appendChild(button);
         tableRow.appendChild(buttonCell);
