@@ -1,0 +1,32 @@
+body{
+  background: rgb(192, 106, 106);
+}
+
+#msg-box{
+  position: relative;
+  width:  121vh;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 50vh;
+  align-items: flex-end;
+  background: green;
+}
+
+#send{
+ 
+  width:  123vh;
+  height: 10vh;
+ 
+}
+
+span{
+  display: block;
+  width: 100%;
+  border: 2px solid black;
+  background: yellow;
+}
+
+textarea{
+  display: block; 
+  width: 122vh;
+}
