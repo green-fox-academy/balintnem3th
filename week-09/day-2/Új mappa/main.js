@@ -7,58 +7,35 @@ var getData = function(){
     httpRequest.onreadystatechange = function(){
         if(httpRequest.readyState === 4 && httpRequest.status === 200 ){
             var datas = JSON.parse(httpRequest.responseText).posts
-            document
             datas.forEach(function(i) {
                 createPost(i);
-                //console.log(datas);
             });
         }
     }  
 }
 
-function upVote (id){
-    
-    //let currentDiv = document.querySelector('#'+id);
-    let currentDiv = document.querySelector('[data-id="'+id+'"]')
-    //let currentId =id;
-    //console.log(i);
-    // console.log(currentId.id);
-    var httpRequest = new XMLHttpRequest();
-    //httpRequest.open('PUT', apiUrl+'/posts/'+currentId+'/upvote');
-    httpRequest.open('PUT', apiUrl+'/posts/'+id+'/upvote'); 
-    httpRequest.setRequestHeader('Accept','application/json');
-    httpRequest.onreadystatechange = function(){
-        if(httpRequest.readyState === 4 && httpRequest.status === 200 ){
-            var datas = JSON.parse(httpRequest.responseText)
-            var post = document.querySelector('.posts');
-            removeChildrenFromNode(post);
-            getData();
-           console.log(datas);
-        }
-    }
-    httpRequest.send();
 
-};
-
-function createPost(i){
-    let convertedTime = converter(i.timestamp);
+function createPost(data){
     const markup = 
-    ` 
-    <div class="post ${i.id}"  data-id=${i.id}>
+    `  <div class="post" data-id=${data.id}>
         <div class = "votebox">
-                <div class="upvote"  data-item-id=${i.id} onclick="upVote(${i.id})"><img src="assets/upvote.png"></div>
-                <p class="post-point">${i.score}</p>
-                <div class="downvote"> <img src="assets/downvote.png"></div>    
-            </div>  
+            <div class="upvote"  onclick="upVote(${data.id})">
+                <img src="assets/upvote.png">
+            </div>
+            <p class="post-point">${data.score}</p>
+            <div class="downvote">
+                <img src="assets/downvote.png">
+            </div>    
+        </div>  
         <div class ="content">
-            <p class="title">${i.title}</p>
-            <div class="url">${i.url}<span class = "time"> time: ${convertedTime} </span></div>  
-            <a href="modify.html?id=${i.id}" class ="modify"  >Modify</a>
-            <div class ="delete" onclick="deletePost(${i.id})">Delete Post</div>  
-                     
-         </div>  
-    <div>
-    `;
+            <p class="title">${data.title}</p>
+            <span class = "time"> time: ${convertedTime} </span>  
+            <a href="modify.html?id=${data.id}" class ="modify"  >Modify</a>
+            <div class ="delete" onclick="deletePost(${data.id})">Delete Post</div>
+            <div class="url">${data.url}</div>           
+        </div>  
+    <div> ` ;
+    let convertedTime = converter(i.timestamp);
     var posts = document.querySelector('.posts');   
     posts.innerHTML += markup;
     var upVoteDiv = document.querySelector('.upvote');
@@ -92,7 +69,7 @@ function removeChildrenFromNode(node) {
 
 
 function deletePost (id){
-    let currentDiv = document.querySelector('[data-id="'+id+'"]')
+    let currentDataId = document.querySelector('[data-id="'+id+'"]')
     var httpRequest = new XMLHttpRequest();
     httpRequest.open('DELETE', apiUrl+'/posts/'+id); 
     httpRequest.setRequestHeader('Accept','application/json');
@@ -108,7 +85,24 @@ function deletePost (id){
 
 };
 
+function downVote(id)
 
+
+function upVote (id){
+    let currentDiv = document.querySelector('[data-id="'+id+'"]')
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open('PUT', apiUrl+'/posts/'+id+'/upvote'); 
+    httpRequest.setRequestHeader('Accept','application/json');
+    httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState === 4 && httpRequest.status === 200 ){
+            var datas = JSON.parse(httpRequest.responseText)
+            var post = document.querySelector('.posts');
+            removeChildrenFromNode(post);
+            getData();
+        }
+    }
+    httpRequest.send();
+};
 
 
 

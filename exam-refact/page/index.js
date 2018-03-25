@@ -4,7 +4,7 @@
 
 function connect(method, query, callback) {
   const xhr = new XMLHttpRequest();
-  const url = `http://localhost:8080${query}`;
+  const url = `http://localhost:3000${query}`;
   // console.log('MyURL', url);
   xhr.open(method, url);
   xhr.onreadystatechange = () => {

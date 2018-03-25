@@ -25,3 +25,10 @@ var getData = function(){
 
 var button = document.querySelector('button');
 button.addEventListener('click',getData);
+
+
+
+Modify.js
+AddPost.js
+
+

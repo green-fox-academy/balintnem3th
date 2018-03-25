@@ -6,7 +6,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const PORT = 8080;
+const PORT = 3000;
 const utilization = 60;
 app.use(express.json());
 
@@ -62,10 +62,6 @@ app.get('/ship', (req, res) => {
       rows: row,
     });
   });
-});
-
-app.listen(PORT, () => {
-  console.log('app listen on :', PORT);
 });
 
 app.post('/movehere/:planetId', (req, res) => {
@@ -139,4 +135,8 @@ app.post('/toship/:planetId', (req, res) => {
       });
     }
   });
+});
+
+app.listen(PORT, () => {
+  console.log('app listen on :', PORT);
 });

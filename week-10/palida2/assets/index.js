@@ -43,7 +43,7 @@ function getModel(param){
     }
     else if(diplomat.checked)
     {
-        param+='?diplomat=1';
+        param+='?diplomat=1&isPolice=false/:id=78';
     }
     var httpRequest = new XMLHttpRequest();
     httpRequest.open('GET', apiUrl+'/search/'+param);    
@@ -53,6 +53,7 @@ function getModel(param){
             var data = (JSON.parse(httpRequest.responseText).rows);
            // console.log('!!!');
             var cont = document.querySelector('.container');
+            console.log( window.location.search);
             removeChildrenFromNode(cont);
             createHeader();
             data.forEach(function(i) {

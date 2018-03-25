@@ -56,4 +56,4 @@ class Test{
 };
 
 const newTest = new Test;
-newTest.testFn();
+newTest.testFn();   

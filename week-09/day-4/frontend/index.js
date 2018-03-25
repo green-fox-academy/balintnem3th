@@ -104,4 +104,19 @@ app.post('/arrays',function(req,res){
   
 });
 
+
+app.post('/sith',function(req,res){
+    console.log(req.body.text)
+    if(req.body.text=== ''){
+        res.json( {
+            "error": "Feed me some text you have to, padawan young you are. Hmmm."
+        });
+    }
+    else if{
+        
+    }
+});
+
+
+
 app.listen(8080);

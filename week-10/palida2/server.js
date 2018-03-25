@@ -28,7 +28,7 @@ app.use('/assets', express.static('./assets'));
 app.get('/',function(req,res){
     console.log('runing');
     res.status(200);
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + 'index.html');
 });
 
 conn.query("SELECT * FROM licence_plates;",function(err,rows){
@@ -71,14 +71,16 @@ app.get('/search/:brand',function(req,res){
     var brand = req.params.brand;
     var police = req.query.police;  
     var diplomat = req.query.diplomat;
-
+    var params = req.params;
+    var query = req.query;
     const isDiplomat = parseInt(req.query.diplomat || 0) === 1;
-
-    console.log(police);
-    console.log(brand);
-    console.log(diplomat);
-    console.log(req.query);
-    console.log(isDiplomat);
+ 
+  //  console.log(police);
+    //console.log(brand);
+   // console.log(diplomat);
+   console.log('param',params);
+    console.log('Full query',req.query);
+   // console.log(isDiplomat);
     var rb = 'RB';
     var dt = 'DT';
     if(police === undefined && diplomat === undefined){
@@ -99,7 +101,7 @@ app.get('/search/:brand',function(req,res){
     res.status(200);
     res.json ({
         'rows' : rows
-    });
+        });
     }); 
 });
 

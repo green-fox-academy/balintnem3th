@@ -66,6 +66,23 @@ app.post('/post', (req, res) => {
   });
 });
 
+app.post('/post/user', (req, res) => {
+  const sql1 = 'INSERT INTO users (user_name, user_password, logged_in) VALUES ?;';
+  const values = ([[req.body.user_name, req.body.user_pw, 0]]);
+  conn.query(sql1, [values], (err, row) => {
+    if (err) {
+      res.status(400);
+      console.log(err);
+      res.json({
+        error: err,
+      });
+    }
+    res.status(200);
+    res.json({
+      rows: row,
+    });
+  });
+});
 
 // app.listen(PORT, () => {
 //   console.log('App listen on :', PORT);
@@ -79,6 +96,6 @@ app.post('/post', (req, res) => {
 //   console.log('running at http://' + host + ':' + port)
 // });
 
-const server = app.listen(3456, "127.0.0.1", () => {
-  console.log('gut a paraszt');
+const server = app.listen(3456, '127.0.0.1', () => {
+  console.log('App runnin');
 });

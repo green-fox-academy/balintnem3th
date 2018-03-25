@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <main>
+        <h1>Green Fox Fashion Web Store</h1>    
+        <h2 class="h2" id="results"></h2>
+        <form action="">
+          <select name="clothes" id="clothes">
+            <option value="" disabled selected>Select item name</option>
+            <option value="jumper">Green Fox Jumper</option> 
+            <option value="polo">Green Fox Short-Sleeved Mesh Polo Shirt</option>
+            <option value="sweaters">Half-Ip Ribbed Mock-Turtleneck Sweater</option>
+            <option value="skirt">Strecth Steamed Pencil Skirt</option>
+            <option value="dress">Two-Tone Sleeveless Sheath Dress</option>
+            <option value="cardigan">Wool/Alpaca Shawl Collar Cardigan</option>
+          </select>
+          <select name="size" id="size">
+            <option value="" disabled selected>Select size</option>
+            <option value="s">s</option> 
+            <option value="m">m</option>
+            <option value="l">l</option>
+            <option value="xl">xl</option>
+            <option value="xxl">xxl</option>
+          </select>
+          <input type="text" id="quantity" name="quantity" />
+          <button id="submit">get total</button>
+        </form>
+        <table class="table"s>
+          <thead>
+            <tr>
+              <th>Item name</th>
+              <th>Manufacturer</th>
+              <th>Category</th>
+              <th>Size</th>
+              <th>Unit price</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"> 
+          </tbody>
+        </table>
+      </main>
+  <script src="index.js"></script>
+</body>
+</html>

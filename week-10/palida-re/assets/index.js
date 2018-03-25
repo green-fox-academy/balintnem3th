@@ -35,7 +35,7 @@ function priceCheck(event){
    // var clothes = document.getElementById("clothes").value;
     console.log(clothes);
     var size0 = document.getElementById("size").value;
-    var size = "'" +size0 + "'" ;
+    var size = "'" +size + "'" ;
     var quantity = document.getElementById("quantity").value;
     var httpRequest = new XMLHttpRequest();
     httpRequest.open('GET', apiUrl+'/price-check/?item='+clothes+'&size='+size+'&quantity='+quantity );    

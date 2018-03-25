@@ -9,7 +9,7 @@ function connect(method, query, callback, send) {
   xhr.open(method, url);
   xhr.setRequestHeader('content-type', 'application/json');
   xhr.onreadystatechange = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    if (xhr.readyState === 4 && xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
       callback(data);
     }
@@ -35,7 +35,7 @@ function renderMsgBox(data) {
   data.rows.forEach((element) => {  
     const messageSpan = document.createElement('span');
     messageSpan.innerHTML = element.msg;
-    msgBox.appendChild(messageSpan);
+    msgBox.appendChild(messageSpan);  
   });
 }
 

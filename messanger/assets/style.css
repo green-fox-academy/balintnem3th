@@ -30,3 +30,9 @@ textarea{
   display: block; 
   width: 122vh;
 }
+
+#create button, #login button{
+  
+  width:  123vh;
+  height: 3vh;
+}

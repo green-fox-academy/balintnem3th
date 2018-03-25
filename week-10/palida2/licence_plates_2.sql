@@ -1,10 +1,11 @@
 create table licence_plates (
-	plate VARCHAR(50),
-	car_brand VARCHAR(50),
-	car_model VARCHAR(50),
-	color VARCHAR(50),
-	year VARCHAR(50)
+	plate VARCHAR(51),
+	car_brand VARCHAR(51),
+	car_model VARCHAR(51),
+	color VARCHAR(51),
+	year VARCHAR(51	)
 );
+insert into licence_plates (plate, car_brand, car_model, color, year) values ('D44-90', 'Jeep', 'Wrangler', 'Goldenrod', 1994);
 insert into licence_plates (plate, car_brand, car_model, color, year) values ('MXS-803', 'Subaru', 'Legacy', 'Pink', 2001);
 insert into licence_plates (plate, car_brand, car_model, color, year) values ('BFH-682', 'Cadillac', 'CTS', 'Yellow', 2004);
 insert into licence_plates (plate, car_brand, car_model, color, year) values ('QQG-264', 'Pontiac', 'Grand Prix', 'Fuscia', 1964);

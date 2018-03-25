@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+<h1>{{shufflerTitle}}</h1>
+<div class="people-container">
+  <input type="text" placeholder="name" [(ngModel)]="nameText">
+  <input type="text" placeholder="age" [(ngModel)]="ageNumber">
+  <input type="text" placeholder="class" [(ngModel)]="classText">
+  <button class="add" (click)="createPerson()">{{buttonText}}</button>
+</div>
+<div class="shuffle-box" *ngFor="let person of peopleArray">
+  {{person}}
+</div>
+</body>
+<router-outlet></router-outlet>
